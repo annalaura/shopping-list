@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  a(href="/lists") Back to Shopping Lists
+  h1= title
+  ul
+    each item in listItems
+        li= item

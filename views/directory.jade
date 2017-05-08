@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  ul
+    each list in lists
+        li
+            a(href="/lists/#{list.name}")= list.name
+
+    li
+        form(action="/lists" method="post")
+            input(type='text' placeholder='name' name='listName')
+            input(type='submit' value='Create New List')
